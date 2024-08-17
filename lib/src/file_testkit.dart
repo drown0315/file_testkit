@@ -35,7 +35,7 @@ class FileTestkit {
     fileSystem = fileSystem ?? MemoryFileSystem();
 
     final result = IOOverrides.runZoned(
-          () async {
+      () async {
         final R result = await body.call();
         return result;
       },
