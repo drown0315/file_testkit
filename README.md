@@ -2,14 +2,13 @@
 
 A simple way to mock file-related operations in Dart, ideal for testing. It can simulate any file-related operation in a memory-based file system, preventing changes to your actual file system.
 
+Language: English| [中文简体](README-ZH.md)
+
 
 ## Why Use file_testkit?
 
 - **Isolated Testing Environments**: Each test runs in its own file system environment, preventing interference between tests.
 - **Safe Testing**: Mock file operations in memory without affecting the real file system.
-- **Simple Setup**: Quickly integrate with just a few lines of code.
-- **Ideal for Unit Tests**: Ensure your file-related logic works correctly in isolation.
-
 
 ## Usage
 
@@ -36,7 +35,7 @@ await FileTestkit.runZoned(() async {
 
   print('test.txt existed is ${file.existsSync()}');
   if (file.existsSync()) {
-    print('file content: ${file.readAsStringSync()}');
+    print('file content: ${file.readAsStringSync()}'); // output: hello
   }
 });
 ```
