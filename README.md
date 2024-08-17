@@ -29,14 +29,14 @@ import 'package:file_testkit/file_testkit.dart';
 ### 3. use file_testkit
 ```dart
 await FileTestkit.runZoned(() async {
-final File file = File('test.txt');
+  final File file = File('test.txt');
 
-file.createSync();
-file.writeAsStringSync('hello');
+  file.createSync();
+  file.writeAsStringSync('hello');
 
-print('test.txt existed is ${file.existsSync()}');
-if (file.existsSync()) {
-print('file content: ${file.readAsStringSync()}');
-}
+  print('test.txt existed is ${file.existsSync()}');
+  if (file.existsSync()) {
+    print('file content: ${file.readAsStringSync()}');
+  }
 });
 ```
